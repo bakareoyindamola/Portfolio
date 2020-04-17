@@ -274,11 +274,14 @@ a {
             grid-template-columns: repeat(3, minmax(349px, auto));
             grid-template-rows: repeat(1, minmax(241px, 241px));
             grid-column-gap: 60px;
-            text-align: center;
 
-            @include maxWidth(1380px) {
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: repeat(4, auto);
+            @include maxWidth(1400px) {
+                grid-template-columns: repeat(3, minmax(290px, auto));
+            }
+
+            @include maxWidth(1200px) {
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(3, auto);
                 grid-row-gap: 20px;
             }
 
@@ -289,7 +292,7 @@ a {
             .work-wrapper {
                 background: #212121;
                 border: 1px solid #000000;
-                padding: 36px 70px 36px 50px;
+                padding: 2.2rem 4.6rem 2.2rem 3.2rem;
                 cursor: pointer;
 
                 &:hover {
