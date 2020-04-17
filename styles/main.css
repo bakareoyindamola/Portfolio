@@ -20,6 +20,7 @@ body {
   background-color: #171717;
   color: white;
   font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 li {
@@ -153,7 +154,7 @@ a {
 
 .user-wrapper .user-contents .user-info .user-links a {
   padding: 12px 27px;
-  background: #27AE60;
+  background: #27ae60;
   margin-right: 10px;
   font-size: 14px;
 }
@@ -503,6 +504,143 @@ a {
   border: none;
 }
 
+.social-icons-wrapper {
+  margin-top: 100px;
+}
+
+.social-icons-wrapper .social-icons {
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 800px) {
+  .social-icons-wrapper .social-icons {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 70px;
+  }
+}
+
+.social-icons-wrapper .social-icons li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.social-icons-wrapper .social-icons li a {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  -webkit-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+          transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons-wrapper .social-icons li a:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: rotate(0deg) skewY(-45deg);
+          transform: rotate(0deg) skewY(-45deg);
+}
+
+.social-icons-wrapper .social-icons li a:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: rotate(0deg) skewX(-45deg);
+          transform: rotate(0deg) skewX(-45deg);
+}
+
+.social-icons-wrapper .social-icons li a:hover {
+  -webkit-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+          transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+}
+
+.social-icons-wrapper .social-icons li a:hover i {
+  color: #fff;
+}
+
+.social-icons-wrapper .social-icons li i {
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(1) a {
+  background: #3b5999;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(1) a:before {
+  background: #2e4a86;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(1) a:after {
+  background: #4a69ad;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(2) a {
+  background: #55acee;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(2) a:before {
+  background: #4184b7;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(2) a:after {
+  background: #4d9fde;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(3) a {
+  background: #dd4b39;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(3) a:before {
+  background: #c13929;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(3) a:after {
+  background: #e8432e;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(4) a {
+  background: #e4405f;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(4) a:before {
+  background: #c03750;
+}
+
+.social-icons-wrapper .social-icons li:hover:nth-child(4) a:after {
+  background: #cf435d;
+}
+
 #scrollto-top {
   position: fixed;
   right: 10px;
@@ -516,6 +654,7 @@ a {
   background-color: #27AE60;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 footer {
